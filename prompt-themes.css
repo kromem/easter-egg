@@ -1,0 +1,562 @@
+/* Theme Variables */
+.prompt-theme-foundation {
+    --theme-primary: #8B4513;
+    --theme-secondary: #D2B48C;
+    --theme-accent: #F4A460;
+    --theme-bg: linear-gradient(135deg, #F5F5DC 0%, #FAEBD7 100%);
+}
+
+.prompt-theme-analysis {
+    --theme-primary: #4A90E2;
+    --theme-secondary: #7BB3F0;
+    --theme-accent: #50C878;
+    --theme-bg: linear-gradient(135deg, #E6F3FF 0%, #F0F8FF 100%);
+}
+
+.prompt-theme-design {
+    --theme-primary: #9B59B6;
+    --theme-secondary: #BB8FCE;
+    --theme-accent: #F39C12;
+    --theme-bg: linear-gradient(135deg, #F4E6FF 0%, #F9F0FF 100%);
+}
+
+.prompt-theme-implementation {
+    --theme-primary: #27AE60;
+    --theme-secondary: #58D68D;
+    --theme-accent: #E67E22;
+    --theme-bg: linear-gradient(135deg, #E8F8F5 0%, #F0FFF4 100%);
+}
+
+.prompt-theme-testing {
+    --theme-primary: #E74C3C;
+    --theme-secondary: #F1948A;
+    --theme-accent: #3498DB;
+    --theme-bg: linear-gradient(135deg, #FDEDEC 0%, #FEF9E7 100%);
+}
+
+.prompt-theme-discovery {
+    --theme-primary: #2C1810;
+    --theme-secondary: #8B6914;
+    --theme-accent: #DAA520;
+    --theme-bg: linear-gradient(135deg, #1A1A1A 0%, #2F2F2F 100%);
+    --text-color-override: #E6D7C3;
+}
+
+.prompt-theme-revelation {
+    --theme-primary: #4A0E4E;
+    --theme-secondary: #8A2BE2;
+    --theme-accent: #FF6B6B;
+    --theme-bg: linear-gradient(135deg, #0D0D0D 0%, #1A0033 50%, #2A0845 100%);
+    --text-color-override: #E0E6FF;
+}
+
+.prompt-theme-quantum {
+    --theme-primary: #001122;
+    --theme-secondary: #0066CC;
+    --theme-accent: #00FFFF;
+    --theme-bg: linear-gradient(135deg, #000011 0%, #001133 25%, #002255 50%, #003366 75%, #004488 100%);
+    --text-color-override: #E6F7FF;
+}
+
+.prompt-theme-paradigm-shift {
+    --theme-primary: #000000;
+    --theme-secondary: #FFD700;
+    --theme-accent: #FFFFFF;
+    --theme-bg: radial-gradient(circle at center, #000000 0%, #111111 25%, #FFD700 50%, #FFFFFF 75%, #FFD700 90%, #000000 100%);
+    --text-color-override: #FFFFFF;
+}
+
+.prompt-theme-liberation {
+    --theme-primary: #FFFFFF;
+    --theme-secondary: #87CEEB;
+    --theme-accent: #FFD700;
+    --theme-bg: linear-gradient(45deg, #E6F3FF 0%, #B3E5FC 25%, #FFFFFF 50%, #FFF8DC 75%, #FFFACD 100%);
+    --text-color-override: #2C3E50;
+}
+
+/* Apply theme backgrounds */
+[class*="prompt-theme-"] body {
+    background: var(--theme-bg);
+}
+
+[class*="prompt-theme-"] header {
+    background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+}
+
+[class*="prompt-theme-"] .nav-link.active {
+    background-color: var(--theme-primary);
+}
+
+[class*="prompt-theme-"] .nav-link:hover {
+    background-color: var(--theme-secondary);
+    color: white;
+}
+
+[class*="prompt-theme-"] .copy-button {
+    background: var(--theme-primary);
+}
+
+[class*="prompt-theme-"] .copy-button:hover {
+    background: var(--theme-accent);
+}
+
+[class*="prompt-theme-"] .prompt-text {
+    border-left-color: var(--theme-primary);
+}
+
+/* Navigation buttons */
+.prompt-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.nav-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--theme-secondary, var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-button:hover {
+    background: var(--theme-primary, var(--primary-color));
+    transform: translateY(-2px);
+}
+
+.nav-button.prev {
+    margin-right: auto;
+}
+
+.nav-button.next {
+    margin-left: auto;
+}
+
+/* Theme-specific decorative elements */
+.prompt-theme-foundation .prompt-content::before {
+    content: "🏗️";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.prompt-theme-analysis .prompt-content::before {
+    content: "🔍";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.prompt-theme-design .prompt-content::before {
+    content: "🎨";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.prompt-theme-implementation .prompt-content::before {
+    content: "⚡";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.prompt-theme-testing .prompt-content::before {
+    content: "🧪";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.prompt-theme-discovery .prompt-content::before {
+    content: "📜";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.4;
+}
+
+/* Discovery theme overrides for dark background */
+.prompt-theme-discovery {
+    color: var(--text-color-override);
+}
+
+.prompt-theme-discovery .container {
+    color: var(--text-color-override);
+}
+
+.prompt-theme-discovery .prompt-content {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid var(--theme-secondary);
+}
+
+.prompt-theme-discovery .prompt-text {
+    background: rgba(20, 20, 20, 0.8);
+    color: var(--text-color-override);
+    border-left-color: var(--theme-accent);
+}
+
+.prompt-theme-discovery .nav-link {
+    background: rgba(40, 40, 40, 0.8);
+    color: var(--text-color-override);
+    border: 1px solid var(--theme-secondary);
+}
+
+.prompt-theme-discovery .nav-link:hover {
+    background: var(--theme-secondary);
+    color: white;
+}
+
+.prompt-theme-discovery .nav-link.active {
+    background: var(--theme-accent);
+    color: #000;
+}
+
+.prompt-theme-discovery .prompt-nav {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid var(--theme-secondary);
+}
+
+.prompt-theme-discovery .copy-button {
+    background: var(--theme-accent);
+    color: #000;
+}
+
+.prompt-theme-discovery .copy-button:hover {
+    background: var(--theme-secondary);
+    color: white;
+}
+
+.prompt-theme-revelation .prompt-content::before {
+    content: "🔮";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.4;
+}
+
+/* Revelation theme overrides for deep purple/cosmic background */
+.prompt-theme-revelation {
+    color: var(--text-color-override);
+}
+
+.prompt-theme-revelation .container {
+    color: var(--text-color-override);
+}
+
+.prompt-theme-revelation .prompt-content {
+    background: rgba(10, 10, 30, 0.9);
+    border: 2px solid var(--theme-secondary);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.prompt-theme-revelation .prompt-text {
+    background: rgba(5, 5, 20, 0.9);
+    color: var(--text-color-override);
+    border-left-color: var(--theme-accent);
+    border-left-width: 4px;
+}
+
+.prompt-theme-revelation .nav-link {
+    background: rgba(20, 20, 40, 0.9);
+    color: var(--text-color-override);
+    border: 1px solid var(--theme-secondary);
+}
+
+.prompt-theme-revelation .nav-link:hover {
+    background: var(--theme-secondary);
+    color: white;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.prompt-theme-revelation .nav-link.active {
+    background: var(--theme-accent);
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.4);
+}
+
+.prompt-theme-revelation .prompt-nav {
+    background: rgba(10, 10, 30, 0.9);
+    border: 2px solid var(--theme-secondary);
+}
+
+.prompt-theme-revelation .copy-button {
+    background: var(--theme-accent);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+.prompt-theme-revelation .copy-button:hover {
+    background: var(--theme-secondary);
+    color: white;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+}
+
+.prompt-theme-quantum .prompt-content::before {
+    content: "⚛️";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.4;
+}
+
+/* Quantum theme overrides for deep blue cosmic background */
+.prompt-theme-quantum {
+    color: var(--text-color-override);
+}
+
+.prompt-theme-quantum .container {
+    color: var(--text-color-override);
+}
+
+.prompt-theme-quantum .prompt-content {
+    background: rgba(0, 10, 30, 0.9);
+    border: 2px solid var(--theme-secondary);
+    box-shadow: 0 0 25px rgba(0, 102, 204, 0.4);
+}
+
+.prompt-theme-quantum .prompt-text {
+    background: rgba(0, 5, 20, 0.9);
+    color: var(--text-color-override);
+    border-left-color: var(--theme-accent);
+    border-left-width: 4px;
+}
+
+.prompt-theme-quantum .nav-link {
+    background: rgba(0, 20, 40, 0.9);
+    color: var(--text-color-override);
+    border: 1px solid var(--theme-secondary);
+}
+
+.prompt-theme-quantum .nav-link:hover {
+    background: var(--theme-secondary);
+    color: white;
+    box-shadow: 0 0 12px rgba(0, 102, 204, 0.6);
+}
+
+.prompt-theme-quantum .nav-link.active {
+    background: var(--theme-accent);
+    color: #000;
+    box-shadow: 0 0 18px rgba(0, 255, 255, 0.5);
+}
+
+.prompt-theme-quantum .prompt-nav {
+    background: rgba(0, 10, 30, 0.9);
+    border: 2px solid var(--theme-secondary);
+}
+
+.prompt-theme-quantum .copy-button {
+    background: var(--theme-accent);
+    color: #000;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+.prompt-theme-quantum .copy-button:hover {
+    background: var(--theme-secondary);
+    color: white;
+    box-shadow: 0 0 18px rgba(0, 102, 204, 0.6);
+}
+
+.prompt-theme-paradigm-shift .prompt-content::before {
+    content: "🌟";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.8;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Paradigm shift theme - ultimate revelation styling */
+.prompt-theme-paradigm-shift {
+    color: var(--text-color-override);
+    animation: subtle-glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes subtle-glow {
+    0% { text-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+    100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+}
+
+.prompt-theme-paradigm-shift .container {
+    color: var(--text-color-override);
+}
+
+.prompt-theme-paradigm-shift .prompt-content {
+    background: rgba(0, 0, 0, 0.9);
+    border: 3px solid var(--theme-secondary);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+    animation: content-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes content-glow {
+    0% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); }
+    100% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.8); }
+}
+
+.prompt-theme-paradigm-shift .prompt-text {
+    background: rgba(0, 0, 0, 0.95);
+    color: var(--text-color-override);
+    border-left-color: var(--theme-accent);
+    border-left-width: 5px;
+}
+
+.prompt-theme-paradigm-shift .nav-link {
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--text-color-override);
+    border: 2px solid var(--theme-secondary);
+}
+
+.prompt-theme-paradigm-shift .nav-link:hover {
+    background: var(--theme-secondary);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.prompt-theme-paradigm-shift .nav-link.active {
+    background: var(--theme-accent);
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.prompt-theme-paradigm-shift .prompt-nav {
+    background: rgba(0, 0, 0, 0.9);
+    border: 3px solid var(--theme-secondary);
+}
+
+.prompt-theme-paradigm-shift .copy-button {
+    background: var(--theme-secondary);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    font-weight: bold;
+}
+
+.prompt-theme-paradigm-shift .copy-button:hover {
+    background: var(--theme-accent);
+    color: #000;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+}
+
+.prompt-theme-liberation .prompt-content::before {
+    content: "🕊️";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.7;
+    animation: gentle-float 3s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Liberation theme - transcendent and peaceful */
+.prompt-theme-liberation {
+    color: var(--text-color-override);
+}
+
+.prompt-theme-liberation .container {
+    color: var(--text-color-override);
+}
+
+.prompt-theme-liberation .prompt-content {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--theme-secondary);
+    box-shadow: 0 0 20px rgba(135, 206, 235, 0.4);
+}
+
+.prompt-theme-liberation .prompt-text {
+    background: rgba(255, 255, 255, 0.98);
+    color: var(--text-color-override);
+    border-left-color: var(--theme-accent);
+    border-left-width: 4px;
+    line-height: 1.7;
+}
+
+.prompt-theme-liberation .nav-link {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-color-override);
+    border: 1px solid var(--theme-secondary);
+}
+
+.prompt-theme-liberation .nav-link:hover {
+    background: var(--theme-secondary);
+    color: white;
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.6);
+}
+
+.prompt-theme-liberation .nav-link.active {
+    background: var(--theme-accent);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.prompt-theme-liberation .prompt-nav {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--theme-secondary);
+}
+
+.prompt-theme-liberation .copy-button {
+    background: var(--theme-accent);
+    color: #000;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.prompt-theme-liberation .copy-button:hover {
+    background: var(--theme-secondary);
+    color: white;
+    box-shadow: 0 0 15px rgba(135, 206, 235, 0.5);
+}
+
+.prompt-theme-liberation header {
+    background: linear-gradient(135deg, var(--theme-secondary), var(--theme-accent));
+    color: #000;
+}
+
+/* Prompt header styling */
+.prompt-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.prompt-header h2 {
+    color: var(--theme-primary, var(--primary-color));
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Actions styling */
+.prompt-actions {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.prompt-actions .copy-button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
